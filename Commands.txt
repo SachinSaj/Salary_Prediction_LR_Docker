@@ -1,0 +1,38 @@
+############################################################################## READ ME ################################################################################
+
+1. To build a docker file
+
+Commands:
+-> docker build -t salpred .      -t (tagging the image), . (current work directory)
+
+2. docker ps -> to see running images
+3. docker images -> to see the existing images
+
+4.  To run the docker
+
+docker run -p 5000:5000 salary (binding needed to be done) [expose 5000, port in code 5000]
+docker run --name salary -d -p ourport:exposed port --rm salary:latest
+
+After that---
+** In browser type - localhost:5000 (if you type like this only the website will work)
+
+OR 
+
+** Go to docker desktop -> images -> Run (images) -> tab(optional) -> localhost (type 5000) -> run -> launch from their itself
+
+5. To delete an image
+
+docker rmi salary
+
+6. To push the images to docker hub
+
+create repository in docker hub "sachinsaj/salary"
+
+in cmd
+docker login
+docker tag salary sachinsaj/salary
+docker push sachinsaj/salary
+
+docker pull salpred
+
+#######################################################################################################################################################################
